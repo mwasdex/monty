@@ -1,7 +1,5 @@
 #include "monty.h"
 
-char *number;
-
 /**
  * read_file - This function reads the file
  * @file_g: file.
@@ -19,13 +17,11 @@ void read_file(char *file_g)
 	stack_t *lst = NULL;
 
 	montyf = fopen(file_g, "r");
-
 	if (montyf == NULL)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", file_g);
 		exit(EXIT_FAILURE);
 	}
-    
 	while ((rt = getline(&buffr, &size, montyf)) != EOF)
 	{
 		if (!buffr)
@@ -104,6 +100,7 @@ char **valid_buffr(char *buffr, int ptr, FILE *montyf)
 void _val(char **cmd, char *buffr, stack_t **lst, int line, FILE *a)
 {
 	int i = 0;
+	char *number;
 
 	while (cmd[i] != NULL)
 		i++;
