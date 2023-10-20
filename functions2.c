@@ -1,5 +1,7 @@
 #include "monty.h"
 
+char *number;
+
 /**
  * _pop - The opcode pop removes the top element of the stack.
  * @stack: doubly linked list representation of a stack (or queue)
