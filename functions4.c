@@ -1,5 +1,7 @@
 #include "monty.h"
 
+char *number;
+
 /**
  * read_file - This function reads the file
  * @file_g: file.
@@ -100,7 +102,6 @@ char **valid_buffr(char *buffr, int ptr, FILE *montyf)
 void _val(char **cmd, char *buffr, stack_t **lst, int line, FILE *a)
 {
 	int i = 0;
-	char *number;
 
 	while (cmd[i] != NULL)
 		i++;
